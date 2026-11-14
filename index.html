@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Byte Size Solutions LLC provides flat rate managed IT for small businesses in Tacoma and the Seattle area. Help desk, security, backups, patching, and monitoring.">
+<link rel="icon" href="data:,">
+<title>Byte Size Solutions LLC | Managed IT in Tacoma, WA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-soft:#f6f8fa;
+  --surface:#ffffff;
+  --surface-2:#eef3f6;
+  --ink:#0f1e2e;
+  --ink-2:#334155;
+  --muted:#5b6b7d;
+  --line:#dde5eb;
+  --navy:#0b2239;
+  --navy-2:#0e2d4a;
+  --teal:#0f766e;
+  --teal-dark:#0b5e57;
+  --teal-soft:#e6f4f1;
+  --amber:#b45309;
+  --amber-soft:#fef3c7;
+  --radius:14px;
+  --shadow:0 10px 30px rgba(11,34,57,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0a1522;
+    --bg-soft:#0d1b2c;
+    --surface:#102133;
+    --surface-2:#13283f;
+    --ink:#e8eef3;
+    --ink-2:#cbd5e1;
+    --muted:#94a8bb;
+    --line:#1e344d;
+    --navy:#081a2e;
+    --navy-2:#0b2239;
+    --teal:#2dd4bf;
+    --teal-dark:#5eead4;
+    --teal-soft:#0f2e2a;
+    --amber:#fbbf24;
+    --amber-soft:#2a2110;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Archivo",system-ui,sans-serif;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0}
+.mono{font-family:"IBM Plex Mono",monospace}
+
+/* Header */
+.header{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--bg) 92%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:48px}
+.mark{width:40px;height:40px;background:var(--navy);color:#fff;display:grid;place-items:center;border-radius:9px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:15px;letter-spacing:-.03em;flex:0 0 auto}
+@media (prefers-color-scheme: dark){.mark{background:#e8eef3;color:#0b2239}}
+.brand-name{font-family:"Archivo",sans-serif;font-weight:800;font-size:17px;line-height:1.1;white-space:nowrap;display:block}
+.brand-sub{font-size:12px;color:var(--muted);line-height:1.2;font-weight:500;display:block;white-space:nowrap}
+.nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.nav a{text-decoration:none;font-size:14px;font-weight:600;color:var(--ink-2);padding:10px 12px;border-radius:8px;min-height:40px;display:inline-flex;align-items:center}
+.nav a:hover{background:var(--surface-2)}
+.nav a.btn-primary{color:#fff}
+.nav a.btn-primary:hover{background:var(--teal-dark)}
+@media (prefers-color-scheme: dark){.nav a.btn-primary{color:#06201c}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:700;border-radius:10px;padding:0 20px;min-height:48px;font-size:15px;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--teal);color:#fff}
+@media (prefers-color-scheme: dark){.btn-primary{color:#06201c}}
+.btn-primary:hover{background:var(--teal-dark)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-outline:hover{border-color:var(--ink)}
+.btn-white{background:#fff;color:#0b2239}
+.btn-ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.header-cta{margin-left:8px}
+@media(max-width:760px){.nav a:not(.btn){display:none}.brand-sub{display:none}}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;padding-top:56px;padding-bottom:60px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.02em}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:#2dd4bf;flex:0 0 auto}
+.hero h1{font-size:52px;font-weight:800;margin-top:20px;max-width:620px}
+.hero h1 span{color:#5eead4}
+.hero-lead{margin-top:18px;font-size:18px;line-height:1.65;color:#cbd5e1;max-width:580px}
+.tagline{margin-top:14px;font-size:15px;font-weight:600;color:#fff;font-style:italic}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;font-size:14px;color:#cbd5e1}
+.hero-meta span{display:inline-flex;gap:7px;align-items:center}
+.check{width:18px;height:18px;flex:0 0 auto;color:#2dd4bf}
+.panel{background:#fff;color:#0f1e2e;border-radius:16px;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+@media (prefers-color-scheme: dark){.panel{background:#102133;color:#e8eef3}}
+.panel-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.panel-title{font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.panel-badge{font-size:12px;font-weight:700;background:var(--teal-soft);color:var(--teal-dark);padding:5px 9px;border-radius:999px}
+.status-list{list-style:none;margin:0;padding:14px 0 0;display:grid;gap:12px}
+.status-list li{display:flex;gap:12px;align-items:flex-start;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg-soft)}
+.status-icon{width:36px;height:36px;border-radius:8px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;flex:0 0 auto}
+.status-icon svg{width:20px;height:20px}
+.status-list strong{display:block;font-size:14px;line-height:1.3}
+.status-list small{display:block;color:var(--muted);font-size:13px;line-height:1.45;margin-top:2px}
+.status-ok{margin-left:auto;font-size:12px;font-weight:700;color:var(--teal);white-space:nowrap;padding-top:2px}
+.panel-foot{margin-top:16px;background:var(--navy);color:#fff;border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.panel-foot strong{font-size:28px;line-height:1;font-family:"Archivo",sans-serif}
+.panel-foot span{font-size:13px;color:#cbd5e1;line-height:1.4;display:block;text-align:right}
+@media(max-width:880px){.hero-inner{grid-template-columns:1fr;padding-top:40px;padding-bottom:44px}.hero h1{font-size:36px}.hero-lead{font-size:17px}}
+@media(max-width:480px){.brand-name{font-size:15px}.mark{width:36px;height:36px;font-size:13px}.header-cta{font-size:13px !important;padding:0 12px !important}}
+
+/* Sections */
+.section{padding:64px 0}
+.section-soft{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.section h2{font-size:34px;max-width:700px}
+.section-sub{margin-top:14px;color:var(--muted);font-size:17px;max-width:720px;line-height:1.65}
+@media(max-width:640px){.section{padding:48px 0}.section h2{font-size:28px}}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.service{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.service-icon{width:44px;height:44px;border-radius:10px;background:var(--teal-soft);color:var(--teal);display:grid;place-items:center;margin-bottom:14px}
+.service-icon svg{width:22px;height:22px}
+.service h3{font-size:17px;margin-bottom:8px}
+.service p{font-size:14.5px;color:var(--muted);line-height:1.6}
+@media(max-width:900px){.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.services{grid-template-columns:1fr}}
+
+/* Compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.compare-card{border-radius:16px;padding:26px;border:1px solid var(--line);background:var(--surface)}
+.compare-card.featured{background:var(--navy);color:#fff;border-color:var(--navy)}
+.compare-card h3{font-size:20px;margin-bottom:6px}
+.compare-card .sub{font-size:14px;opacity:.85;margin-bottom:18px}
+.compare-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.compare-list li{display:flex;gap:11px;align-items:flex-start;font-size:15px;line-height:1.55}
+.compare-list li svg{width:20px;height:20px;flex:0 0 auto;margin-top:2px}
+.compare-card:not(.featured) .compare-list svg{color:#b45309}
+.compare-card.featured .compare-list svg{color:#2dd4bf}
+.compare-note{margin-top:20px;font-size:14px;color:var(--muted);max-width:760px}
+@media(max-width:760px){.compare{grid-template-columns:1fr}}
+
+/* Reporting callout */
+.callout{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.callout-box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.report-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.report-row:last-child{border-bottom:0}
+.report-row span{color:var(--muted)}
+.report-row strong{white-space:nowrap}
+@media(max-width:760px){.callout{grid-template-columns:1fr}}
+
+/* Offers */
+.offers{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px;margin-top:32px;align-items:stretch}
+.offer{border-radius:16px;padding:26px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column}
+.offer.main{background:var(--teal);color:#fff;border-color:var(--teal)}
+@media (prefers-color-scheme: dark){.offer.main{color:#06201c}}
+.offer-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.offer-price{font-family:"Archivo",sans-serif;font-size:48px;line-height:1;font-weight:800;margin:14px 0 4px}
+.offer-price small{font-size:16px;font-weight:600}
+.offer h3{font-size:19px;margin:10px 0 8px}
+.offer p{font-size:14.5px;line-height:1.6;opacity:.92}
+.offer ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px;font-size:14.5px}
+.offer ul li{display:flex;gap:9px;align-items:flex-start}
+.offer ul svg{width:18px;height:18px;flex:0 0 auto;margin-top:3px}
+.offer .btn{margin-top:auto;padding-top:0}
+.offer-action{margin-top:20px}
+.offer-action .btn{width:100%}
+.strike{opacity:.75;text-decoration:line-through}
+@media(max-width:900px){.offers{grid-template-columns:1fr}}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.step{padding:22px;border-top:3px solid var(--teal);background:var(--surface);border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0 0 var(--radius) var(--radius)}
+.step-num{font-family:"IBM Plex Mono",monospace;font-weight:700;color:var(--teal);font-size:13px;letter-spacing:.08em}
+.step h3{font-size:17px;margin:10px 0 8px}
+.step p{font-size:14.5px;color:var(--muted);line-height:1.6}
+@media(max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* Contact */
+.contact{background:var(--navy);color:#fff;border-radius:20px;padding:36px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px}
+.contact h2{font-size:32px;color:#fff}
+.contact p{color:#cbd5e1;margin-top:12px;font-size:16px;line-height:1.65;max-width:520px}
+.contact-details{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:22px;height:fit-content}
+.contact-details dl{margin:0;display:grid;gap:16px}
+.contact-details dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;font-weight:700}
+.contact-details dd{margin:3px 0 0;font-size:16px;font-weight:600}
+.contact-details a{color:#5eead4;text-decoration:none;word-break:break-all}
+.contact-details a:hover{text-decoration:underline}
+.contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media(max-width:760px){.contact{grid-template-columns:1fr;padding:26px}.contact h2{font-size:27px}}
+
+footer{padding:28px 0 36px;color:var(--muted);font-size:13.5px}
+.footer-inner{display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:20px}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Byte Size Solutions home">
+      <span class="mark" aria-hidden="true">B&gt;_</span>
+      <span>
+        <span class="brand-name">Byte Size Solutions</span>
+        <span class="brand-sub">Managed IT | Tacoma, WA</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#compare">Why managed IT</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary header-cta" href="#contact" style="min-height:44px;padding:0 16px;font-size:14px">Free assessment</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow"><span class="eyebrow-dot"></span> For small businesses</span>
+        <h1>Managed IT that keeps your business <span>running.</span></h1>
+        <p class="hero-lead">Flat rate managed IT for small businesses in Tacoma and the Seattle area. Help desk, security, backups, updates, and around-the-clock monitoring handled for you, so problems get fixed before they shut the business down.</p>
+        <p class="tagline">Good things come in byte-size packages.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get your free assessment</a>
+          <a class="btn btn-ghost-light" href="#pricing">See founding client pricing</a>
+        </div>
+        <div class="hero-meta">
+          <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Fully managed or co-managed</span>
+          <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> One flat monthly rate</span>
+          <span><svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg> Based in Tacoma</span>
+        </div>
+      </div>
+
+      <div class="panel" aria-label="What is included">
+        <div class="panel-head">
+          <span class="panel-title">Around-the-clock monitoring</span>
+          <span class="panel-badge">All included</span>
+        </div>
+        <ul class="status-list">
+          <li>
+            <span class="status-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5z"/></svg></span>
+            <span><strong>Help desk support</strong><small>Day to day questions and fixes for your team, without you playing IT.</small></span>
+            <span class="status-ok">Included</span>
+          </li>
+          <li>
+            <span class="status-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+            <span><strong>Security and patching</strong><small>Updates applied and protections kept current across your computers.</small></span>
+            <span class="status-ok">Included</span>
+          </li>
+          <li>
+            <span class="status-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></span>
+            <span><strong>Backups and monitoring</strong><small>Systems watched around the clock, with backups ready if something fails.</small></span>
+            <span class="status-ok">Included</span>
+          </li>
+        </ul>
+        <div class="panel-foot">
+          <div><strong>$150</strong></div>
+          <span>per user / month<br>founding client rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <p class="kicker">What is covered</p>
+      <h2>Everything a small business needs from IT, in one plan.</h2>
+      <p class="section-sub">No hourly billing surprises. One monthly rate covers the essentials that keep your computers, email, and files working and protected.</p>
+
+      <div class="services">
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5z"/></svg></span>
+          <h3>Help desk</h3>
+          <p>Your team gets a person to call when something stops working, instead of losing an afternoon to a printer, password, or email problem.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>Security</h3>
+          <p>Endpoint protection, safer sign ins, and practical safeguards sized for a small business, kept up to date without you tracking them.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></span>
+          <h3>Backups</h3>
+          <p>Your important files backed up and checked, so a failed drive, a mistake, or ransomware does not become a lost business.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 11-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span>
+          <h3>Updates and patching</h3>
+          <p>Windows and software updates tested and applied on schedule, closing the holes that most attacks walk through.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          <h3>Microsoft 365 and network</h3>
+          <p>Email, accounts, and your office network set up and managed properly, including new starter and leaver changes.</p>
+        </article>
+        <article class="service">
+          <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
+          <h3>Monitoring and reporting</h3>
+          <p>Systems monitored around the clock for early warning signs, plus a clear monthly report on the health of your technology and where your money went.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARE -->
+  <section class="section section-soft" id="compare">
+    <div class="wrap">
+      <p class="kicker">Doing IT yourself, or about to hire?</p>
+      <h2>One hire is one person. Managed IT is coverage.</h2>
+      <p class="section-sub">If IT currently lands on you, or you are weighing a first IT hire, this is the honest comparison most owners work through.</p>
+
+      <div class="compare">
+        <article class="compare-card">
+          <h3>Hiring one IT person</h3>
+          <p class="sub">A single salary carries a lot of single points of failure.</p>
+          <ul class="compare-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg><span>One person's hours and one person's knowledge. If they do not know it, it does not get done.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg><span>Coverage stops when they are sick, on vacation, in training, or if they leave.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg><span>You carry salary plus payroll taxes and benefits, before any tools or software.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg><span>Security, backup, and monitoring tools are extra purchases you still have to choose and manage.</span></li>
+          </ul>
+        </article>
+
+        <article class="compare-card featured">
+          <h3>Byte Size Solutions</h3>
+          <p class="sub">Fully managed, or co-managed alongside your person.</p>
+          <ul class="compare-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Help desk, security, backups, and around-the-clock monitoring included.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>One flat rate per user per month, simple to budget and typically less than the full cost of one hire.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Already have someone on IT? Co-managed support takes the routine load off them so they can focus on the business.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Clear monthly reporting, so you can see what was done and what needs attention next.</span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="compare-note">The right choice depends on your size. For most small businesses, managed IT covers more ground for less than a single hire costs once taxes, benefits, tools, and cover are counted.</p>
+    </div>
+  </section>
+
+  <!-- REPORTING -->
+  <section class="section">
+    <div class="wrap callout">
+      <div>
+        <p class="kicker">A different kind of IT report</p>
+        <h2>You should be able to see what your IT is doing.</h2>
+        <p class="section-sub" style="margin-top:14px">Byte Size Solutions is run by Kamal Dhaliwal, whose background is in business intelligence and reporting. That shows up in how you are kept informed: not just tickets closed, but a plain monthly view of your systems, your risks, and your spending, so decisions are easy to make.</p>
+        <div class="hero-actions" style="margin-top:22px">
+          <a class="btn btn-outline" href="#contact">Ask about reporting</a>
+        </div>
+      </div>
+      <div class="callout-box" aria-label="Example monthly report topics">
+        <p class="panel-title" style="margin-bottom:6px">In your monthly report</p>
+        <div class="report-row"><span>Devices monitored</span><strong>Health at a glance</strong></div>
+        <div class="report-row"><span>Updates and patching</span><strong>Current or flagged</strong></div>
+        <div class="report-row"><span>Backup status</span><strong>Verified</strong></div>
+        <div class="report-row"><span>Support requests</span><strong>What was fixed</strong></div>
+        <div class="report-row"><span>Recommendations</span><strong>What to plan next</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING / OFFERS -->
+  <section class="section section-soft" id="pricing">
+    <div class="wrap">
+      <p class="kicker">Current offers</p>
+      <h2>Start with a free look. Stay for the flat rate.</h2>
+      <p class="section-sub">Founding client pricing is available for a limited first group of clients while Byte Size Solutions grows in the Tacoma and Seattle area.</p>
+
+      <div class="offers">
+        <article class="offer main">
+          <span class="offer-label">Founding client rate</span>
+          <div class="offer-price">$150 <small>/ user / month</small></div>
+          <p>Typical managed IT runs <span class="strike">$200 to $250</span> per user per month. Founding clients lock in $150 for the first 6 to 12 months, then pricing is reviewed together.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Help desk, security, backups, patching, and around-the-clock monitoring included</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Fully managed or co-managed</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Monthly reporting included</span></li>
+          </ul>
+          <div class="offer-action"><a class="btn btn-white" href="#contact">Claim the founding rate</a></div>
+        </article>
+
+        <article class="offer">
+          <span class="offer-label" style="color:var(--teal)">Step one, no cost</span>
+          <h3>Free network and security assessment</h3>
+          <p>A review of your current setup: computers, network, email security, and backups. You get a clear summary of what is working, what is at risk, and what to fix first.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>No obligation to sign up</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Plain language findings</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>A sensible first step before any decision</span></li>
+          </ul>
+          <div class="offer-action"><a class="btn btn-outline" href="#contact">Book the free assessment</a></div>
+        </article>
+
+        <article class="offer">
+          <span class="offer-label" style="color:var(--amber)">Getting started</span>
+          <h3>Onboarding, 35% off</h3>
+          <p>Onboarding is normally priced at one month of service. Founding clients get 35% off that fee, covering setup, documentation, and getting monitoring and backups in place.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>One month of service, discounted</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Systems documented from day one</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--teal)" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>No long disruption to your workday</span></li>
+          </ul>
+          <div class="offer-action"><a class="btn btn-outline" href="#contact">Ask about onboarding</a></div>
+        </article>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-num">STEP 01</span>
+          <h3>Free assessment</h3>
+          <p>A short review of your network, security, and backups, with findings in plain language.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">STEP 02</span>
+          <h3>A clear plan and price</h3>
+          <p>You get a flat monthly price per user and a short list of priorities. No pressure to proceed.</p>
+        </article>
+        <article class="step">
+          <span class="step-num">STEP 03</span>
+          <h3>Ongoing cover</h3>
+          <p>Around-the-clock monitoring, patching, backups, and help desk start, with a monthly report so you stay in control.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact" style="padding-top:56px">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2>Talk to Kamal about your IT.</h2>
+          <p>Call or email for the free assessment, or just to talk through whether managed IT makes sense for your business. Based in Tacoma and serving the Seattle area, Byte Size Solutions works with small businesses that want IT handled properly without hiring for it.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:+12533557603">Call (253) 355-7603</a>
+            <a class="btn btn-ghost-light" href="mailto:kamal@bytesizemsp.com">Email Kamal</a>
+          </div>
+          <p style="font-size:13.5px;margin-top:18px">Prefer to start by email? Mention the free assessment and a good time to talk will be arranged.</p>
+        </div>
+        <div class="contact-details">
+          <dl>
+            <div><dt>Contact</dt><dd>Kamal Dhaliwal</dd></div>
+            <div><dt>Business</dt><dd>Byte Size Solutions LLC</dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+12533557603">(253) 355-7603</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:kamal@bytesizemsp.com">kamal@bytesizemsp.com</a></dd></div>
+            <div><dt>Web</dt><dd><a href="https://bytesizemsp.com">bytesizemsp.com</a></dd></div>
+            <div><dt>Based in</dt><dd>Tacoma, WA, serving the Seattle area</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span><strong style="color:var(--ink)">Byte Size Solutions LLC</strong> | Good things come in byte-size packages.</span>
+    <span>Tacoma, WA | (253) 355-7603 | kamal@bytesizemsp.com</span>
+  </div>
+</footer>
+
+</body>
+</html>
