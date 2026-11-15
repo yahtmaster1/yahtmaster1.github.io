@@ -285,7 +285,7 @@ footer{padding:28px 0 36px;color:var(--muted);font-size:13.5px}
       <div class="services">
         <article class="service">
           <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3v5z"/></svg></span>
-          <h3>Help desk</h3>
+          <h3>Help Desk</h3>
           <p>Your team gets a person to call when something stops working, instead of losing an afternoon to a printer, password, or email problem.</p>
         </article>
         <article class="service">
@@ -300,17 +300,17 @@ footer{padding:28px 0 36px;color:var(--muted);font-size:13.5px}
         </article>
         <article class="service">
           <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 11-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span>
-          <h3>Updates and patching</h3>
+          <h3>Updates and Patching</h3>
           <p>Windows and software updates tested and applied on schedule, closing the holes that most attacks walk through.</p>
         </article>
         <article class="service">
           <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-          <h3>Microsoft 365 and network</h3>
+          <h3>Microsoft 365 and Network</h3>
           <p>Email, accounts, and your office network set up and managed properly, including new starter and leaver changes.</p>
         </article>
         <article class="service">
           <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-          <h3>Monitoring and reporting</h3>
+          <h3>Monitoring and Reporting</h3>
           <p>Systems monitored around the clock for early warning signs, plus a clear monthly report on the health of your technology and where your money went.</p>
         </article>
       </div>
@@ -447,16 +447,18 @@ footer{padding:28px 0 36px;color:var(--muted);font-size:13.5px}
           <p>Call or email for the free assessment, or just to talk through whether managed IT makes sense for your business. Based in Tacoma and serving the Seattle area, Byte Size Solutions works with small businesses that want IT handled properly without hiring for it.</p>
           <div class="contact-actions">
             <a class="btn btn-primary" href="tel:+12533557603">Call (253) 355-7603</a>
-            <a class="btn btn-ghost-light" href="mailto:kamal@bytesizemsp.com">Email Kamal</a>
+            <a class="btn btn-ghost-light" href="mailto:kamal@bytesizemsp.com?subject=Free%20assessment%20%E2%80%94%20Byte%20Size%20Solutions&amp;body=Hi%20Kamal%2C%0A%0AI%27d%20like%20to%20book%20the%20free%20network%20and%20security%20assessment.%0A%0ABusiness%3A%20%0ANumber%20of%20users%2Fcomputers%3A%20%0AGood%20time%20to%20talk%3A%20%0A" aria-label="Email Kamal at kamal@bytesizemsp.com">Email kamal@bytesizemsp.com</a>
+            <button class="btn btn-ghost-light" type="button" id="copyEmailBtn">Copy email address</button>
           </div>
-          <p style="font-size:13.5px;margin-top:18px">Prefer to start by email? Mention the free assessment and a good time to talk will be arranged.</p>
+          <p id="copyEmailStatus" role="status" aria-live="polite" style="font-size:13.5px;margin-top:12px;min-height:20px;color:#5eead4"></p>
+          <p style="font-size:13.5px;margin-top:6px">Prefer to start by email? Mention the free assessment and a good time to talk will be arranged. If the email button does not open your mail app, copy the address above and email <a href="mailto:kamal@bytesizemsp.com?subject=Free%20assessment%20%E2%80%94%20Byte%20Size%20Solutions" style="color:#5eead4">kamal@bytesizemsp.com</a> directly.</p>
         </div>
         <div class="contact-details">
           <dl>
             <div><dt>Contact</dt><dd>Kamal Dhaliwal</dd></div>
             <div><dt>Business</dt><dd>Byte Size Solutions LLC</dd></div>
             <div><dt>Phone</dt><dd><a href="tel:+12533557603">(253) 355-7603</a></dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:kamal@bytesizemsp.com">kamal@bytesizemsp.com</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:kamal@bytesizemsp.com?subject=Free%20assessment%20%E2%80%94%20Byte%20Size%20Solutions">kamal@bytesizemsp.com</a></dd></div>
             <div><dt>Web</dt><dd><a href="https://bytesizemsp.com">bytesizemsp.com</a></dd></div>
             <div><dt>Based in</dt><dd>Tacoma, WA, serving the Seattle area</dd></div>
           </dl>
@@ -470,9 +472,31 @@ footer{padding:28px 0 36px;color:var(--muted);font-size:13.5px}
 <footer>
   <div class="wrap footer-inner">
     <span><strong style="color:var(--ink)">Byte Size Solutions LLC</strong> | Good things come in byte-size packages.</span>
-    <span>Tacoma, WA | (253) 355-7603 | kamal@bytesizemsp.com</span>
+    <span>Tacoma, WA | (253) 355-7603 | <a href="mailto:kamal@bytesizemsp.com?subject=Free%20assessment%20%E2%80%94%20Byte%20Size%20Solutions" style="color:inherit">kamal@bytesizemsp.com</a></span>
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.getElementById('copyEmailBtn');
+  var status = document.getElementById('copyEmailStatus');
+  if(!btn || !status) return;
+  var email = 'kamal@bytesizemsp.com';
+  function show(msg){ status.textContent = msg; }
+  btn.addEventListener('click', function(){
+    function done(){ show('Copied: ' + email + ' — paste it into your email app.'); btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email address'; }, 2600); }
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = email; ta.setAttribute('readonly',''); ta.style.position='absolute'; ta.style.left='-9999px';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch(e){ show('Email: ' + email); }
+      document.body.removeChild(ta);
+    }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(done).catch(fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
 </body>
 </html>
